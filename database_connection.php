@@ -1,14 +1,13 @@
 <?php
     $host = 'localhost';
-    $dbname = 'test2';
+    $dbname = 'test';
     $user = 'root';
     $pass = '';
 
     try{
         $connection = new PDO('mysql:host=' . $host . ';dbname=' . $dbname, $user, $pass);
-        print 'OK';
     }catch(PDOException $e){
-        print 'NO';
+        print 'Database connection failed: <br>' . $e->getMessage();
         die();
     }
 ?>
